@@ -890,6 +890,7 @@ project: 56a7b6005114717dd2af2add -> member: 569cd0535114717dd2af2a9b
 	Depois, vai-se na coleção de usuários onde os IDs não estão dentre aqueles do array vetUser1Proj.
 ```
 > var vetUsersFirstProj = [];
+
 > db.projects.find({},{_id:1,name:1,"members.user_id":1}).sort({_id:1}).limit(1).toArray()[0].members.forEach(function (member){vetUsersFirstProj.push(member.user_id)});
 > vetUsersFirstProj
 ```
